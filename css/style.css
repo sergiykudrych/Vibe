@@ -540,6 +540,7 @@ main {
 
 .main {
   padding-top: 135px;
+  height: 100vh;
 }
 .main__text {
   flex: 0 1 558px;
@@ -585,6 +586,16 @@ main {
 @media (max-width: 725px) {
   .main__title {
     max-width: 350px;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 725px) and (max-width: 1230px) {
+  .main__title {
+    font-size: calc(
+        33px + 7 *
+          ((100vw - 320px) / 910)
+      );
   }
 }
 .main__subtutle {
@@ -613,6 +624,8 @@ main {
 @media (max-width: 725px) {
   .main__subtutle {
     max-width: 500px;
+    font-size: 20px;
+    margin-bottom: 40px;
   }
 }
 .main__subtutle-span1 {
@@ -649,7 +662,7 @@ main {
 .main__action {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 25px;
 }
 
 .title-span {
@@ -814,33 +827,20 @@ main {
 @media (max-width: 1230px) {
   .button__main {
     width: calc(
-        250px + 90 *
+        315px + 25 *
           ((100vw - 320px) / 910)
       );
   }
 }
-
-._icon-Shape::after {
-  content: "\e901";
-  color: #fff;
-  margin-left: 19px;
-  font-size: 20px;
-}
-@media (max-width: 1230px) {
-  ._icon-Shape::after {
-    margin-left: calc(
-        10px + 9 *
-          ((100vw - 320px) / 910)
-      );
-  }
-}
-@media (max-width: 1230px) {
-  ._icon-Shape::after {
-    font-size: calc(
-        15px + 5 *
-          ((100vw - 320px) / 910)
-      );
-  }
+.button__main::after {
+  content: "";
+  background-image: url("../img/Shape.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 22px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .input__number {
@@ -853,7 +853,7 @@ main {
 @media (max-width: 1230px) {
   .input__number {
     width: calc(
-        250px + 90 *
+        315px + 25 *
           ((100vw - 320px) / 910)
       );
   }
@@ -906,6 +906,11 @@ main {
   top: 60%;
   left: 165px;
 }
+@media (max-width: 768px) {
+  .scrolldown {
+    top: 40%;
+  }
+}
 .scrolldown__img {
   position: relative;
   animation-name: show-scrolldown;
@@ -938,6 +943,11 @@ main {
   position: fixed;
   top: 50%;
   right: 165px;
+}
+@media (max-width: 768px) {
+  .navigation {
+    top: 40%;
+  }
 }
 .navigation__item {
   background-color: #b1b1b3;
